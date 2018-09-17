@@ -1,0 +1,85 @@
+# Project information
+site_name:  国药租赁信息部
+site_description: 国药租赁信息部wiki
+site_author: 徐恺(Leonidas Xu)
+site_url: http://10.31.24.214:8000/
+
+# Copyright
+copyright: Copyright &copy; 2018 Sinopharm 国药租赁信息部 licensed under the <a href='http://www.gnu.org/licenses/gpl-3.0.en.html'>GPL-3.0</a>      
+
+use_directory_urls: false
+site_favicon: favicon.ico
+
+pages:
+    - 首页: index.md
+    - 租赁系统:
+        - 本地环境搭建:
+            - 1. 软件准备: Share/leasingSystem/environment/program.md
+            - 2. 代码拉取并导入: Share/leasingSystem/environment/downloadCode.md
+            - 3. Intellij配置: Share/leasingSystem/environment/devEnv.md
+
+#theme: readthedocs
+#深色还不错
+#请使用 pip install mkdocs-material 下载这款主题
+theme: 
+    name: material
+    palette:
+        primary: 'Blue'
+        accent: 'pink'
+    language: 'zh'
+    feature: 
+        tabs: true   
+#全黑
+#theme: cyborg
+#有bug
+#theme: bootstrap
+# 原生没有网格背景
+#theme: cerulean
+
+#theme: cosmo
+#theme: flatly
+#theme: simplex
+#简约美
+#theme: spacelab
+#红
+#theme: united
+#h黑白美
+#theme: yeti
+
+markdown_extensions:
+    - admonition #!!! node summary info tip success fail question warning danger bug quote
+    - codehilite(linenums=false,guess_lang=false) # linenums="2"
+    - footnotes #[^1]: 
+    - meta #title: path: source: description: hero
+    - def_list
+    - toc:
+        permalink: '❣'
+    - pymdownx.superfences #admontion中可以继续写代码快
+    - pymdownx.details #折叠内容 ???
+    - pymdownx.betterem(smart_enable=all) #粗斜
+    - pymdownx.caret #上标^ 下划线 ^^
+    - pymdownx.critic #{++++}{----}{====}{~~~>~~}{>><<}
+
+    - pymdownx.magiclink:
+    - pymdownx.mark:
+    - pymdownx.progressbar: #[=10% "10%"]
+    - pymdownx.smartsymbols:
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde # ~~~~  
+
+extra_css:
+    - css/extra.css
+
+extra_javascript:
+    - extends_js/countIp.js
+
+extra:
+    search:
+        language: 'zh, en'
+    social:
+        - type: 'weixin'
+          link: ''
+        - type: 'gitlab'
+          link: 'http://10.31.24.214:8000'  
+#    disqus: 'mkdocs-material'
